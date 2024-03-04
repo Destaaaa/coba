@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "apis";
+$dbname = "dbschool";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -474,10 +474,6 @@ button:hover {
                         <td>{$row['nisn']}</td>
                         <td>{$row['nama']}</td>
                         <td>{$row['kelas']}</td>
-                        <td class='action-buttons'>
-                        <a href=\"javascript:populateEditTeacherModal('{$row['nip']}', '{$row['nama']}', '{$row['mata_pelajaran']}')\" class='edit-button'>Edit</a>
-                        <a href=\"?deleteTeacher={$row['nip']}\" onclick=\"return confirm('Apakah Anda yakin ingin menghapus guru ini?');\" class='delete-button'>Hapus</a>
-                        </td>
                     </tr>";
             }
             ?>
